@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Privacy &amp; Visibility</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,700&family=Nunito+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#fff1eb",
+                        "inverse-primary": "#ffb59d",
+                        "surface-bright": "#fff8f6",
+                        "outline": "#87736d",
+                        "text-secondary": "#5C4A40",
+                        "surface-container": "#ffeae0",
+                        "accent-pressed": "#82412C",
+                        "on-background": "#251913",
+                        "on-tertiary-container": "#c6efe8",
+                        "surface-dim": "#ecd6cc",
+                        "surface-variant": "#f5ded4",
+                        "surface-container-high": "#fae4da",
+                        "on-tertiary-fixed": "#00201d",
+                        "secondary": "#8f4c31",
+                        "inverse-on-surface": "#ffede6",
+                        "background": "#FBF5F1",
+                        "border": "#E8DAD0",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#793c21",
+                        "on-secondary-fixed-variant": "#72361c",
+                        "secondary-container": "#ffa988",
+                        "secondary-fixed-dim": "#ffb599",
+                        "warning": "#D97706",
+                        "tertiary-container": "#486e69",
+                        "outline-variant": "#dac1ba",
+                        "tertiary-fixed-dim": "#a6cec8",
+                        "primary-fixed": "#ffdbd0",
+                        "danger": "#DC2626",
+                        "surface": "#FFFFFF",
+                        "text-tertiary": "#8C7A70",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#f5ded4",
+                        "tertiary": "#305651",
+                        "accent-tint": "#F5E2D8",
+                        "inverse-surface": "#3b2e27",
+                        "primary-container": "#9e5238",
+                        "on-primary-fixed-variant": "#75331b",
+                        "tertiary-fixed": "#c2ebe4",
+                        "primary-fixed-dim": "#ffb59d",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#ffe0d7",
+                        "on-tertiary-fixed-variant": "#274d48",
+                        "on-surface-variant": "#54433e",
+                        "on-primary-fixed": "#390c00",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#ffdbce",
+                        "primary": "#803b23",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#934930",
+                        "on-surface": "#251913",
+                        "on-tertiary": "#ffffff",
+                        "success": "#16A34A",
+                        "on-secondary-fixed": "#370e00",
+                        "on-error-container": "#93000a",
+                        "surface-alt": "#F3E8E0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "edge-margin": "20px",
+                        "unit": "8px",
+                        "gutter": "16px",
+                        "safe-top": "59px",
+                        "safe-bottom": "34px"
+                    },
+                    "fontFamily": {
+                        "display": ["Newsreader"],
+                        "label": ["Nunito Sans"],
+                        "caption": ["Nunito Sans"],
+                        "body": ["Nunito Sans"],
+                        "title": ["Nunito Sans"]
+                    },
+                    "fontSize": {
+                        "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+                        "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "title": ["20px", { "lineHeight": "28px", "fontWeight": "600" }]
+                    },
+                    "boxShadow": {
+                        "level-1": "0 1px 2px rgba(0,0,0,.04)",
+                        "level-2": "0 8px 24px rgba(0,0,0,.06)"
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #C77A5B;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #C77A5B;
+        }
+        .toggle-checkbox:checked + .toggle-label:after {
+            transform: translateX(100%);
+            border-color: white;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background min-h-screen text-on-background selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top App Bar (From Shared Components JSON) -->
+<header class="bg-background dark:bg-background w-full top-0 sticky z-50 flat no shadows flex items-center w-full px-edge-margin h-[59px] pt-safe-top">
+<button aria-label="Go back" class="flex items-center justify-center p-2 -ml-2 text-primary dark:text-primary-fixed-dim hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined" style="font-size: 24px;">chevron_left</span>
+</button>
+<h1 class="flex-1 text-center font-title text-title dark:text-on-background text-primary dark:text-primary-fixed-dim pr-6">
+            Privacy &amp; Visibility
+        </h1>
+</header>
+<!-- Main Canvas -->
+<main class="px-edge-margin pt-6 pb-[calc(34px+24px)] flex flex-col gap-6 max-w-[600px] mx-auto w-full">
+<!-- Settings Group -->
+<section class="bg-surface rounded-[20px] shadow-level-1 overflow-hidden flex flex-col">
+<!-- Row 1: Profile visibility -->
+<div class="flex items-center justify-between p-4 border-b border-border/50 hover:bg-surface-alt/30 transition-colors cursor-pointer group">
+<span class="font-label text-label text-primary">Profile visibility</span>
+<div class="flex items-center gap-2">
+<span class="font-body text-body text-text-secondary">Public</span>
+<span class="material-symbols-outlined text-text-tertiary group-hover:text-primary transition-colors" style="font-size: 20px;">chevron_right</span>
+</div>
+</div>
+<!-- Row 2: Default post visibility -->
+<div class="flex items-center justify-between p-4 border-b border-border/50 hover:bg-surface-alt/30 transition-colors cursor-pointer group">
+<span class="font-label text-label text-primary">Default post visibility</span>
+<div class="flex items-center gap-2">
+<span class="font-body text-body text-text-secondary">Connections only</span>
+<span class="material-symbols-outlined text-text-tertiary group-hover:text-primary transition-colors" style="font-size: 20px;">chevron_right</span>
+</div>
+</div>
+<!-- Row 3: Who can message me -->
+<div class="flex items-center justify-between p-4 border-b border-border/50 hover:bg-surface-alt/30 transition-colors cursor-pointer group">
+<span class="font-label text-label text-primary">Who can message me</span>
+<div class="flex items-center gap-2">
+<span class="font-body text-body text-text-secondary">Connections</span>
+<span class="material-symbols-outlined text-text-tertiary group-hover:text-primary transition-colors" style="font-size: 20px;">chevron_right</span>
+</div>
+</div>
+<!-- Row 4: Who can see my location (Toggle) -->
+<div class="flex items-center justify-between p-4 border-b border-border/50 hover:bg-surface-alt/30 transition-colors">
+<span class="font-label text-label text-primary">Who can see my location</span>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer z-10 transition-transform duration-200 checked:translate-x-full checked:border-[#C77A5B]" id="location-toggle" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-[#C77A5B] cursor-pointer transition-colors duration-200" for="location-toggle"></label>
+</div>
+</div>
+<!-- Row 5: Blocked users -->
+<div class="flex items-center justify-between p-4 hover:bg-surface-alt/30 transition-colors cursor-pointer group">
+<span class="font-label text-label text-primary">Blocked users</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-text-tertiary group-hover:text-primary transition-colors" style="font-size: 20px;">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Policy Section -->
+<section class="bg-surface rounded-[20px] shadow-level-1 overflow-hidden flex flex-col mt-2">
+<div class="flex items-center justify-between p-4 hover:bg-surface-alt/30 transition-colors cursor-pointer group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#C77A5B]" style="font-variation-settings: 'FILL' 1;">shield_locked</span>
+<span class="font-label text-label text-primary">Data &amp; Privacy Policy</span>
+</div>
+<span class="material-symbols-outlined text-text-tertiary group-hover:text-primary transition-colors" style="font-size: 20px;">open_in_new</span>
+</div>
+</section>
+</main>
+</body></html>

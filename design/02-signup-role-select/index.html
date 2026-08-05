@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Credentia - Sign Up Step 1</title>
+<!-- Google Fonts: Newsreader and Nunito Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration (From Design System) -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#486e69",
+                        "surface-container-lowest": "#ffffff",
+                        "border": "#E8DAD0",
+                        "primary-fixed-dim": "#ffb59d",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#c6efe8",
+                        "surface-container-high": "#fae4da",
+                        "inverse-primary": "#ffb59d",
+                        "accent-pressed": "#82412C",
+                        "secondary-fixed": "#ffdbce",
+                        "on-secondary-fixed-variant": "#72361c",
+                        "secondary": "#8f4c31",
+                        "on-primary-fixed": "#390c00",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed": "#370e00",
+                        "tertiary": "#305651",
+                        "success": "#16A34A",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#dac1ba",
+                        "outline": "#87736d",
+                        "on-tertiary-fixed": "#00201d",
+                        "primary": "#803b23",
+                        "inverse-on-surface": "#ffede6",
+                        "danger": "#DC2626",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "primary-container": "#9e5238",
+                        "secondary-fixed-dim": "#ffb599",
+                        "surface": "#FFFFFF",
+                        "primary-fixed": "#ffdbd0",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#3b2e27",
+                        "background": "#FBF5F1",
+                        "surface-container-low": "#fff1eb",
+                        "on-surface-variant": "#54433e",
+                        "surface-variant": "#f5ded4",
+                        "tertiary-fixed": "#c2ebe4",
+                        "surface-dim": "#ecd6cc",
+                        "accent-tint": "#F5E2D8",
+                        "surface-bright": "#fff8f6",
+                        "text-tertiary": "#8C7A70",
+                        "on-primary-fixed-variant": "#75331b",
+                        "surface-tint": "#934930",
+                        "surface-container": "#ffeae0",
+                        "on-surface": "#251913",
+                        "surface-container-highest": "#f5ded4",
+                        "warning": "#D97706",
+                        "on-primary-container": "#ffe0d7",
+                        "surface-alt": "#F3E8E0",
+                        "on-secondary-container": "#793c21",
+                        "on-background": "#251913",
+                        "secondary-container": "#ffa988",
+                        "text-secondary": "#5C4A40",
+                        "tertiary-fixed-dim": "#a6cec8",
+                        "on-tertiary-fixed-variant": "#274d48"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.25rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "edge-margin": "20px",
+                        "unit": "8px",
+                        "safe-top": "59px",
+                        "safe-bottom": "34px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "label": ["Nunito Sans", "sans-serif"],
+                        "display": ["Newsreader", "serif"],
+                        "body": ["Nunito Sans", "sans-serif"],
+                        "title": ["Nunito Sans", "sans-serif"],
+                        "caption": ["Nunito Sans", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "label": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                        "display": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "title": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "caption": ["13px", {"lineHeight": "18px", "fontWeight": "500"}],
+                        "display-mobile": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    },
+                    "boxShadow": {
+                        "soft-1": "0 1px 2px rgba(0,0,0,.04)",
+                        "soft-2": "0 8px 24px rgba(0,0,0,.06)"
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Hide scrollbar for grid if it overflows horizontally on very small screens */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Area (Transactional/Linear Intent: No BottomNavBar, Simple TopNav) -->
+<header class="w-full flex justify-between items-center px-edge-margin pt-safe-top h-[84px] bg-background">
+<button aria-label="Go back" class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-alt transition-colors active:scale-95 text-text-secondary" type="button">
+<span class="material-symbols-outlined" style="font-size: 24px;">arrow_back_ios_new</span>
+</button>
+<div class="font-label text-label text-text-tertiary">
+            Step 1 of 3
+        </div>
+<div class="w-10"></div> <!-- Spacer for flex balance -->
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col px-edge-margin pb-safe-bottom w-full max-w-[600px] mx-auto">
+<!-- Headers -->
+<section class="mt-4 mb-8">
+<h1 class="font-display text-display-mobile md:text-display text-primary mb-2">What's your role?</h1>
+<p class="font-body text-body text-text-secondary">Select your primary specialty to get started.</p>
+</section>
+<!-- Role Grid -->
+<section class="mb-10">
+<div class="grid grid-cols-2 gap-3">
+<!-- Role Card 1 (Selected State) -->
+<button class="role-card flex flex-col items-center justify-center p-4 bg-accent-tint border-2 border-primary-container rounded-2xl shadow-soft-1 active:scale-95 transition-all text-center h-[110px]" data-selected="true" type="button">
+<span class="material-symbols-outlined fill text-primary-container mb-2" style="font-size: 32px;">medical_services</span>
+<span class="font-label text-label text-primary-fixed">Dentist</span>
+</button>
+<!-- Role Card 2 -->
+<button class="role-card flex flex-col items-center justify-center p-4 bg-surface border border-transparent rounded-2xl shadow-soft-1 hover:shadow-soft-2 active:scale-95 transition-all text-center h-[110px]" data-selected="false" type="button">
+<span class="material-symbols-outlined text-text-tertiary mb-2" style="font-size: 32px;">health_and_safety</span>
+<span class="font-label text-label text-text-secondary">Dental Hygienist</span>
+</button>
+<!-- Role Card 3 -->
+<button class="role-card flex flex-col items-center justify-center p-4 bg-surface border border-transparent rounded-2xl shadow-soft-1 hover:shadow-soft-2 active:scale-95 transition-all text-center h-[110px]" data-selected="false" type="button">
+<span class="material-symbols-outlined text-text-tertiary mb-2" style="font-size: 32px;">support_agent</span>
+<span class="font-label text-label text-text-secondary">Dental Assistant</span>
+</button>
+<!-- Role Card 4 -->
+<button class="role-card flex flex-col items-center justify-center p-4 bg-surface border border-transparent rounded-2xl shadow-soft-1 hover:shadow-soft-2 active:scale-95 transition-all text-center h-[110px]" data-selected="false" type="button">
+<span class="material-symbols-outlined text-text-tertiary mb-2" style="font-size: 32px;">dentistry</span>
+<span class="font-label text-label text-text-secondary">Orthodontist</span>
+</button>
+<!-- Role Card 5 (More) -->
+<button class="role-card flex flex-col items-center justify-center p-4 bg-surface border border-transparent border-dashed rounded-2xl shadow-soft-1 hover:shadow-soft-2 active:scale-95 transition-all text-center h-[110px]" data-selected="false" type="button">
+<span class="material-symbols-outlined text-text-tertiary mb-2" style="font-size: 32px;">add_circle</span>
+<span class="font-label text-label text-text-secondary">More specialties</span>
+</button>
+</div>
+</section>
+<!-- Account Details Form -->
+<section class="flex-1 flex flex-col gap-5">
+<!-- Email Input -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label text-label text-text-secondary pl-1" for="email">Email address</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-text-tertiary">mail</span>
+<input class="w-full bg-surface border border-border rounded-[12px] py-3.5 pl-12 pr-4 font-body text-body text-on-surface placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-primary-container focus:border-transparent transition-shadow shadow-soft-1" id="email" placeholder="you@example.com" type="email"/>
+</div>
+</div>
+<!-- Password Input -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label text-label text-text-secondary pl-1" for="password">Create a password</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-text-tertiary">lock</span>
+<input class="w-full bg-surface border border-border rounded-[12px] py-3.5 pl-12 pr-12 font-body text-body text-on-surface placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-primary-container focus:border-transparent transition-shadow shadow-soft-1" id="password" placeholder="••••••••" type="password"/>
+<button aria-label="Toggle password visibility" class="absolute right-4 top-1/2 -translate-y-1/2 text-text-tertiary hover:text-text-secondary transition-colors" type="button">
+<span class="material-symbols-outlined">visibility_off</span>
+</button>
+</div>
+<p class="font-caption text-caption text-text-tertiary pl-1 mt-1">Must be at least 8 characters.</p>
+</div>
+</section>
+<!-- Fixed Action Area -->
+<div class="mt-8 pt-4 pb-4">
+<button class="w-full bg-primary-container hover:bg-accent-pressed text-on-primary font-title text-title py-[14px] rounded-full shadow-soft-2 active:scale-95 transition-all duration-200" type="button">
+                Continue
+            </button>
+</div>
+</main>
+<script>
+        // Simple micro-interaction for role cards selection
+        document.addEventListener('DOMContentLoaded', () => {
+            const roleCards = document.querySelectorAll('.role-card');
+            
+            roleCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    // Reset all cards to unselected state
+                    roleCards.forEach(c => {
+                        c.setAttribute('data-selected', 'false');
+                        c.className = 'role-card flex flex-col items-center justify-center p-4 bg-surface border border-transparent rounded-2xl shadow-soft-1 hover:shadow-soft-2 active:scale-95 transition-all text-center h-[110px]';
+                        
+                        // Handle the dashed border case for the last card
+                        if(c.querySelector('.material-symbols-outlined').textContent === 'add_circle') {
+                             c.classList.add('border-dashed');
+                        }
+                        
+                        const icon = c.querySelector('.material-symbols-outlined');
+                        const text = c.querySelector('span:not(.material-symbols-outlined)');
+                        
+                        icon.classList.remove('fill', 'text-primary-container');
+                        icon.classList.add('text-text-tertiary');
+                        
+                        text.classList.remove('text-primary-fixed');
+                        text.classList.add('text-text-secondary');
+                    });
+                    
+                    // Set clicked card to selected state
+                    this.setAttribute('data-selected', 'true');
+                    this.className = 'role-card flex flex-col items-center justify-center p-4 bg-accent-tint border-2 border-primary-container rounded-2xl shadow-soft-1 active:scale-95 transition-all text-center h-[110px]';
+                    
+                    const icon = this.querySelector('.material-symbols-outlined');
+                    const text = this.querySelector('span:not(.material-symbols-outlined)');
+                    
+                    icon.classList.remove('text-text-tertiary');
+                    icon.classList.add('fill', 'text-primary-container');
+                    
+                    text.classList.remove('text-text-secondary');
+                    text.classList.add('text-primary-fixed');
+                });
+            });
+        });
+    </script>
+</body></html>

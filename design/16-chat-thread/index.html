@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chat with Dr. Sarah Jenkins - Credentia</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-dim": "#ecd6cc",
+                      "surface-tint": "#934930",
+                      "on-tertiary-fixed-variant": "#274d48",
+                      "secondary": "#8f4c31",
+                      "surface-container": "#ffeae0",
+                      "surface-container-lowest": "#ffffff",
+                      "text-secondary": "#5C4A40",
+                      "on-error": "#ffffff",
+                      "success": "#16A34A",
+                      "primary": "#803b23",
+                      "primary-container": "#9e5238",
+                      "on-tertiary-container": "#c6efe8",
+                      "on-secondary": "#ffffff",
+                      "outline-variant": "#dac1ba",
+                      "primary-fixed": "#ffdbd0",
+                      "accent-tint": "#F5E2D8",
+                      "tertiary-fixed-dim": "#a6cec8",
+                      "surface": "#FFFFFF",
+                      "surface-variant": "#f5ded4",
+                      "on-tertiary": "#ffffff",
+                      "background": "#FBF5F1",
+                      "surface-bright": "#fff8f6",
+                      "on-surface": "#251913",
+                      "on-secondary-container": "#793c21",
+                      "inverse-on-surface": "#ffede6",
+                      "text-tertiary": "#8C7A70",
+                      "outline": "#87736d",
+                      "accent-pressed": "#82412C",
+                      "on-error-container": "#93000a",
+                      "on-primary-fixed-variant": "#75331b",
+                      "on-tertiary-fixed": "#00201d",
+                      "on-background": "#251913",
+                      "error": "#ba1a1a",
+                      "on-primary-container": "#ffe0d7",
+                      "secondary-fixed": "#ffdbce",
+                      "on-secondary-fixed": "#370e00",
+                      "inverse-surface": "#3b2e27",
+                      "border": "#E8DAD0",
+                      "tertiary-container": "#486e69",
+                      "tertiary-fixed": "#c2ebe4",
+                      "on-primary-fixed": "#390c00",
+                      "surface-container-highest": "#f5ded4",
+                      "inverse-primary": "#ffb59d",
+                      "error-container": "#ffdad6",
+                      "surface-alt": "#F3E8E0",
+                      "tertiary": "#305651",
+                      "on-primary": "#ffffff",
+                      "surface-container-high": "#fae4da",
+                      "secondary-container": "#ffa988",
+                      "primary-fixed-dim": "#ffb59d",
+                      "on-surface-variant": "#54433e",
+                      "on-secondary-fixed-variant": "#72361c",
+                      "secondary-fixed-dim": "#ffb599",
+                      "surface-container-low": "#fff1eb",
+                      "warning": "#D97706",
+                      "danger": "#DC2626"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px",
+                      "chat": "20px"
+              },
+              "spacing": {
+                      "gutter": "16px",
+                      "edge-margin": "20px",
+                      "safe-top": "59px",
+                      "safe-bottom": "34px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "label": [
+                              "Nunito Sans"
+                      ],
+                      "title": [
+                              "Nunito Sans"
+                      ],
+                      "display": [
+                              "Newsreader"
+                      ],
+                      "body": [
+                              "Nunito Sans"
+                      ],
+                      "caption": [
+                              "Nunito Sans"
+                      ]
+              },
+              "fontSize": {
+                      "label": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "title": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "caption": [
+                              "13px",
+                              {
+                                      "lineHeight": "18px",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+          },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top App Bar -->
+<header class="flex items-center w-full px-edge-margin py-unit max-w-full bg-surface shadow-[0_1px_2px_rgba(0,0,0,0.04)] sticky top-0 z-50 pt-[calc(env(safe-area-inset-top)+8px)]">
+<button aria-label="Go back" class="p-2 -ml-2 text-primary hover:bg-surface-variant transition-colors rounded-full active:scale-95 transition-transform mr-2 focus:outline-none focus:ring-2 focus:ring-primary-container">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<div class="flex-1 flex flex-col justify-center">
+<h1 class="text-title font-title text-on-surface">Dr. Sarah Jenkins</h1>
+<p class="text-caption font-caption text-text-tertiary">Orthodontist</p>
+</div>
+<div class="ml-4 flex-shrink-0">
+<img alt="Profile picture of Dr. Sarah Jenkins" class="w-10 h-10 rounded-full object-cover border border-border" data-alt="A highly detailed professional portrait of Dr. Sarah Jenkins, an Orthodontist, smiling warmly. She is wearing a modern, subtle medical coat over smart-casual clothing. The lighting is soft and bright, capturing a warm, trustworthy, and human-first aesthetic in a contemporary clinical setting with warm terracotta and eucalyptus tones in the blurred background. 50-100 words." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUTOr3H_2-0ZMORs_tiu8w7YaRUOaR9PuTDi-2dAeMtTrGSkc9355C81pRDetstmOHLfeX5zDajo128C5L3IQa0mNUSD6KrVh8gpo4vOGPM6Exo8KOr9zN7E9X7BGRy5h22UccBnYkKmI3jbLmtZ2i6B8jdpGbE3hkK0WrKhCkWYJLT3fT1mmOkShzouXkf0zvgaN4tdBHWGnbaV4ussCiLtYebKpz-WFAE33BTvUBokr9ANOwu1tO"/>
+</div>
+</header>
+<!-- Message List Canvas -->
+<main class="flex-1 overflow-y-auto px-edge-margin py-6 flex flex-col gap-6 max-w-2xl mx-auto w-full pb-[100px]">
+<!-- Date Divider -->
+<div class="flex justify-center w-full">
+<span class="text-caption font-caption text-text-tertiary bg-surface-alt px-3 py-1 rounded-full">Today</span>
+</div>
+<!-- Received Message (Dr. Sarah) -->
+<div class="flex flex-col items-start max-w-[85%] self-start gap-1">
+<div class="bg-surface-alt text-on-surface rounded-[20px] rounded-tl-sm px-4 py-3 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
+<p class="text-body font-body">Hi Elena, I reviewed the aligner cases you sent over. The precision on the second case is impressive.</p>
+</div>
+<span class="text-caption font-caption text-text-tertiary ml-2">10:42 AM</span>
+</div>
+<!-- Sent Message (User) -->
+<div class="flex flex-col items-end max-w-[85%] self-end gap-1">
+<div class="bg-primary-container text-on-primary rounded-[20px] rounded-tr-sm px-4 py-3 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
+<p class="text-body font-body">Thanks Sarah! I'm planning to start the initial impressions next week. Any specific scanner you'd recommend?</p>
+</div>
+<span class="text-caption font-caption text-text-tertiary mr-2">10:45 AM</span>
+</div>
+</main>
+<!-- Input Area -->
+<footer class="fixed bottom-0 left-0 w-full bg-surface border-t border-border px-edge-margin py-3 pb-[calc(env(safe-area-inset-bottom)+12px)] shadow-[0_-4px_24px_rgba(0,0,0,0.04)]">
+<div class="max-w-2xl mx-auto flex items-end gap-3 w-full">
+<!-- Attachment Button -->
+<button aria-label="Attach file" class="p-3 text-text-tertiary hover:text-primary hover:bg-surface-variant rounded-full transition-colors flex-shrink-0 mb-0.5 focus:outline-none focus:ring-2 focus:ring-primary-container">
+<svg class="lucide lucide-paperclip" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
+</button>
+<!-- Text Input -->
+<div class="flex-1 relative">
+<textarea class="w-full bg-background border border-border rounded-xl px-4 py-3 text-body font-body text-on-surface placeholder-text-tertiary focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container focus:ring-opacity-50 resize-none min-h-[48px] max-h-[120px]" oninput="this.style.height = ''; this.style.height = Math.min(this.scrollHeight, 120) + 'px'" placeholder="Message..." rows="1" style="scrollbar-width: none; -ms-overflow-style: none;"></textarea>
+</div>
+<!-- Send Button -->
+<button aria-label="Send message" class="p-3 bg-primary-container text-on-primary rounded-full hover:bg-accent-pressed transition-colors flex-shrink-0 shadow-[0_1px_2px_rgba(0,0,0,0.04)] active:scale-95 mb-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-surface focus:ring-primary-container">
+<span class="material-symbols-outlined" data-icon="send" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Messages - Credentia</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,700&amp;family=Nunito+Sans:opsz,wght@6..12,400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#ffede6",
+                    "on-primary-container": "#ffe0d7",
+                    "text-secondary": "#5C4A40",
+                    "inverse-primary": "#ffb59d",
+                    "on-primary-fixed-variant": "#75331b",
+                    "surface-container-high": "#fae4da",
+                    "on-background": "#251913",
+                    "surface-tint": "#934930",
+                    "on-secondary-container": "#793c21",
+                    "surface-container": "#ffeae0",
+                    "accent-tint": "#F5E2D8",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed": "#ffdbce",
+                    "on-secondary-fixed-variant": "#72361c",
+                    "on-tertiary-fixed": "#00201d",
+                    "surface-dim": "#ecd6cc",
+                    "on-secondary": "#ffffff",
+                    "success": "#16A34A",
+                    "secondary-container": "#ffa988",
+                    "on-error": "#ffffff",
+                    "background": "#FBF5F1",
+                    "warning": "#D97706",
+                    "surface-variant": "#f5ded4",
+                    "secondary": "#8f4c31",
+                    "secondary-fixed-dim": "#ffb599",
+                    "on-surface": "#251913",
+                    "outline": "#87736d",
+                    "outline-variant": "#dac1ba",
+                    "on-tertiary-container": "#c6efe8",
+                    "on-secondary-fixed": "#370e00",
+                    "text-tertiary": "#8C7A70",
+                    "surface-alt": "#F3E8E0",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#fff8f6",
+                    "primary-fixed": "#ffdbd0",
+                    "border": "#E8DAD0",
+                    "on-tertiary-fixed-variant": "#274d48",
+                    "surface-container-highest": "#f5ded4",
+                    "tertiary-fixed": "#c2ebe4",
+                    "error": "#ba1a1a",
+                    "tertiary": "#305651",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#486e69",
+                    "tertiary-fixed-dim": "#a6cec8",
+                    "on-primary": "#ffffff",
+                    "danger": "#DC2626",
+                    "error-container": "#ffdad6",
+                    "inverse-surface": "#3b2e27",
+                    "accent-pressed": "#82412C",
+                    "primary-container": "#9e5238",
+                    "primary-fixed-dim": "#ffb59d",
+                    "primary": "#803b23",
+                    "surface-container-low": "#fff1eb",
+                    "on-surface-variant": "#54433e",
+                    "on-primary-fixed": "#390c00",
+                    "surface": "#FFFFFF"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "edge-margin": "20px",
+                    "unit": "8px",
+                    "safe-top": "59px",
+                    "gutter": "16px",
+                    "safe-bottom": "34px"
+            },
+            "fontFamily": {
+                    "body": [
+                            "Nunito Sans"
+                    ],
+                    "display": [
+                            "Newsreader"
+                    ],
+                    "label": [
+                            "Nunito Sans"
+                    ],
+                    "caption": [
+                            "Nunito Sans"
+                    ],
+                    "title": [
+                            "Nunito Sans"
+                    ]
+            },
+            "fontSize": {
+                    "body": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "label": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "caption": [
+                            "13px",
+                            {
+                                    "lineHeight": "18px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "title": [
+                            "20px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-mobile": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "title-mobile": [
+                            "18px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "600"
+                            }
+                    ]
+            }
+        },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Hide scrollbar for clean UI */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body text-body antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 bg-background flex justify-between items-center px-edge-margin h-[59px] w-full pt-[env(safe-area-inset-top)]">
+<div class="flex items-center gap-2 text-primary font-title text-title-mobile hover:opacity-80 transition-opacity active:scale-95 duration-200 cursor-pointer">
+<span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span>
+</div>
+<h1 class="font-display text-display-mobile text-primary font-bold tracking-tight absolute left-1/2 transform -translate-x-1/2">
+            Messages
+        </h1>
+<div class="flex items-center gap-3 text-primary hover:opacity-80 transition-opacity active:scale-95 duration-200 cursor-pointer">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="pt-[calc(59px+env(safe-area-inset-top))] pb-[calc(84px+env(safe-area-inset-bottom))] px-edge-margin flex flex-col gap-6 min-h-screen">
+<!-- Search Input -->
+<div class="relative w-full pt-4">
+<div class="absolute inset-y-0 left-0 pl-4 pt-4 flex items-center pointer-events-none text-text-tertiary">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full pl-11 pr-4 py-3 bg-surface border border-border rounded-xl font-body text-body text-on-surface placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all shadow-[0_1px_2px_rgba(0,0,0,0.04)]" placeholder="Search messages" type="text"/>
+</div>
+<!-- Conversations List -->
+<div class="flex flex-col gap-2">
+<!-- Conversation Row (Unread) -->
+<div class="bg-surface rounded-xl p-4 flex items-center gap-4 cursor-pointer hover:bg-surface-bright transition-colors shadow-[0_1px_2px_rgba(0,0,0,0.04)] active:scale-[0.98] duration-150">
+<div class="relative flex-shrink-0">
+<img class="w-14 h-14 rounded-full object-cover border border-border" data-alt="A professional headshot of a mature male doctor with grey hair, wearing a clean white lab coat over a light blue dress shirt. The lighting is bright and warm, creating a trustworthy and approachable mood. He is smiling gently. The background is a softly blurred modern clinical setting with warm earth-toned accents, fitting a premium healthcare network aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9TgQX5vFFvv2lWDUJLBN4K3tfMz83sxL5OMNizVrvbuxMwsm_bEYDqbqYvn3w9-lpeVweEV4B7p3eR6s2FWS4k3eid7zCte-aY5f4XnG5NkZvXwiUNVCnVJ-l2Xbheg8GThV6zlVZinza_8CZXE7cS6EQ7syIAHb_cIUm4D587etmIXZJZn-EKbmpwmfF4yso7SEtZMoLQGhuQ9Q5ws41Al-2Du1KnilXlPGh5tagiIyHLgtN3cf-"/>
+<div class="absolute -top-1 -right-1 w-4 h-4 bg-primary rounded-full border-2 border-surface"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-center mb-0.5">
+<div class="flex items-center gap-1">
+<span class="font-title text-body font-semibold text-on-surface truncate">Dr. Marcus Thorne</span>
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<span class="font-caption text-caption text-primary font-semibold flex-shrink-0">2m</span>
+</div>
+<div class="flex justify-between items-center">
+<p class="font-body text-label text-text-secondary truncate pr-4 font-semibold">That sounds great, I'll see you then!</p>
+<span class="font-caption text-[11px] text-text-tertiary">Orthodontist</span>
+</div>
+</div>
+</div>
+<!-- Conversation Row (Read) -->
+<div class="bg-surface rounded-xl p-4 flex items-center gap-4 cursor-pointer hover:bg-surface-bright transition-colors shadow-[0_1px_2px_rgba(0,0,0,0.04)] active:scale-[0.98] duration-150">
+<div class="relative flex-shrink-0">
+<img class="w-14 h-14 rounded-full object-cover border border-border" data-alt="A professional headshot of a young female dentist with dark hair pulled back neatly, wearing dark navy scrubs. She is smiling confidently. The lighting is soft and flattering, highlighting a warm, modern professional environment. The background is slightly out of focus, showing subtle terracotta and neutral tones typical of a high-end medical clinic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJAIh-Dsc_1TyPUQxeNrtBktG_zjz83vrRprn1n_llPgRUmCPEaGDlaxt9GBsZ4L9jLsTN_18d2CwjkAkk1KQfPkTsJCWt-6uUb1t7X31wRSmPhHMjw6p4GJf_BplrnojheDxC-zrU2SKvBx_wRiYljf30M9BsicFrX7wVdk2vZ9b5lMGi2z9VZX3sFAb0hzQ8Ht43wh5c32DwlJaF_hAZwbmyd5Ui37dUZ-r0H3n7A98u-B3OnUZ6"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-center mb-0.5">
+<div class="flex items-center gap-1">
+<span class="font-title text-body font-semibold text-on-surface truncate">Dr. Sarah Jenkins</span>
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<span class="font-caption text-caption text-text-tertiary flex-shrink-0">1h</span>
+</div>
+<div class="flex justify-between items-center">
+<p class="font-body text-label text-text-tertiary truncate pr-4">Could you send over those patient files?</p>
+<span class="font-caption text-[11px] text-text-tertiary">Dentist</span>
+</div>
+</div>
+</div>
+<!-- Conversation Row (Read) -->
+<div class="bg-surface rounded-xl p-4 flex items-center gap-4 cursor-pointer hover:bg-surface-bright transition-colors shadow-[0_1px_2px_rgba(0,0,0,0.04)] active:scale-[0.98] duration-150">
+<div class="relative flex-shrink-0">
+<img class="w-14 h-14 rounded-full object-cover border border-border" data-alt="A professional headshot of a middle-aged male periodontist with glasses and short brown hair, wearing a white coat over a warm tan shirt. He has a calm, reassuring expression. The lighting is even and natural, projecting professionalism and warmth. The background features blurred, soft organic shapes in eucalyptus and off-white tones, perfectly matching a modern healthcare brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJf-90t88k8_LTgv8riuie9qvEzauljO99bTHzwyY74DHF8Dj2pQ1ZKiulcQkOxhWLV55xD1aVUPy6DNp93nk3iwkkAKwa3uBiIjZSbxYNQt3SytlEplTDqPd1svHiWvb-1kyoSMAR73Y8mqPqxw9VZm-AJLD0AvqbmBp_9e7lBPtZj9ghJDolRURcFH7rcZjdkw3ztTi6dlrsI35T71JI4-jsjhtqUrJQcqWQJ_qr5VJt6YRl3tVS"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-center mb-0.5">
+<div class="flex items-center gap-1">
+<span class="font-title text-body font-semibold text-on-surface truncate">Dr. Elias Vance</span>
+</div>
+<span class="font-caption text-caption text-text-tertiary flex-shrink-0">Yesterday</span>
+</div>
+<div class="flex justify-between items-center">
+<p class="font-body text-label text-text-tertiary truncate pr-4">Thanks for the referral, I'll follow up.</p>
+<span class="font-caption text-[11px] text-text-tertiary">Periodontist</span>
+</div>
+</div>
+</div>
+<!-- Conversation Row (Read) -->
+<div class="bg-surface rounded-xl p-4 flex items-center gap-4 cursor-pointer hover:bg-surface-bright transition-colors shadow-[0_1px_2px_rgba(0,0,0,0.04)] active:scale-[0.98] duration-150">
+<div class="relative flex-shrink-0">
+<img class="w-14 h-14 rounded-full object-cover border border-border" data-alt="A professional headshot of a female oral surgeon with blonde hair, wearing teal scrubs and a stethoscope draped around her neck. She looks friendly and highly competent. The lighting is crisp and bright, emphasizing clean lines and a modern feel. The background is a soft, warm neutral tone, consistent with a premium medical professional network aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsyYXH_k7XaoSszWSN8fQMLG_Z2gIVwmHEXMtLo0-wSbxn8o7KlGfhRhBzdJELooDl6_44OB3NSoNwoZzoHhhYWgzch9Wp3HBcgqr14Jp9goCrgOlOjEWlf9K1WFnROYJLk3_hhamWLZxMa8xxn8ScVTAIeSuq3qFRm6L-IxjHVDtGzvU2sZEOaVAiNdrlPXFGeNZvr0XVQRtR8_Ifej7ehz7qPsqmkx8H1vhgn9q0HjmzzaDr9MV_"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-center mb-0.5">
+<div class="flex items-center gap-1">
+<span class="font-title text-body font-semibold text-on-surface truncate">Dr. Chloe Adams</span>
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<span class="font-caption text-caption text-text-tertiary flex-shrink-0">Tue</span>
+</div>
+<div class="flex justify-between items-center">
+<p class="font-body text-label text-text-tertiary truncate pr-4">Let's schedule a call to discuss the case.</p>
+<span class="font-caption text-[11px] text-text-tertiary">Oral Surgeon</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="bg-surface shadow-[0_-1px_2px_rgba(0,0,0,0.04)] fixed bottom-0 w-full z-50 h-[84px] flex justify-around items-center px-edge-margin pb-[env(safe-area-inset-bottom)]">
+<button class="flex flex-col items-center justify-center text-text-tertiary hover:text-primary-container transition-colors active:scale-90 duration-150 gap-1 w-16">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="font-label text-[10px] font-medium">Feed</span>
+</button>
+<button class="flex flex-col items-center justify-center text-text-tertiary hover:text-primary-container transition-colors active:scale-90 duration-150 gap-1 w-16">
+<span class="material-symbols-outlined text-[24px]">search</span>
+<span class="font-label text-[10px] font-medium">Discover</span>
+</button>
+<button class="flex flex-col items-center justify-center text-primary font-bold active:scale-90 transition-transform duration-150 gap-1 w-16">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+<span class="font-label text-[10px] font-bold">Messages</span>
+</button>
+<button class="flex flex-col items-center justify-center text-text-tertiary hover:text-primary-container transition-colors active:scale-90 duration-150 gap-1 w-16 relative">
+<span class="material-symbols-outlined text-[24px]">notifications</span>
+<span class="font-label text-[10px] font-medium">Notifications</span>
+</button>
+<button class="flex flex-col items-center justify-center text-text-tertiary hover:text-primary-container transition-colors active:scale-90 duration-150 gap-1 w-16">
+<span class="material-symbols-outlined text-[24px]">person</span>
+<span class="font-label text-[10px] font-medium">Profile</span>
+</button>
+</nav>
+</body></html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<title>Credentia - Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700&family=Newsreader:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "accent-tint": "#F5E2D8",
+                        "text-secondary": "#5C4A40",
+                        "surface-dim": "#ecd6cc",
+                        "on-tertiary": "#ffffff",
+                        "text-tertiary": "#8C7A70",
+                        "surface-container-low": "#fff1eb",
+                        "surface-alt": "#F3E8E0",
+                        "tertiary-container": "#486e69",
+                        "border": "#E8DAD0",
+                        "on-primary-fixed-variant": "#75331b",
+                        "on-secondary-fixed": "#370e00",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#ffe0d7",
+                        "outline": "#87736d",
+                        "danger": "#DC2626",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#a6cec8",
+                        "surface-container-high": "#fae4da",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#305651",
+                        "primary-fixed-dim": "#ffb59d",
+                        "tertiary-fixed": "#c2ebe4",
+                        "secondary-container": "#ffa988",
+                        "surface-tint": "#934930",
+                        "surface-container": "#ffeae0",
+                        "surface-bright": "#fff8f6",
+                        "on-tertiary-fixed": "#00201d",
+                        "on-secondary-fixed-variant": "#72361c",
+                        "secondary": "#8f4c31",
+                        "on-secondary-container": "#793c21",
+                        "inverse-on-surface": "#ffede6",
+                        "inverse-primary": "#ffb59d",
+                        "success": "#16A34A",
+                        "inverse-surface": "#3b2e27",
+                        "error": "#ba1a1a",
+                        "on-background": "#251913",
+                        "surface-variant": "#f5ded4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#dac1ba",
+                        "primary": "#803b23",
+                        "on-surface": "#251913",
+                        "primary-fixed": "#ffdbd0",
+                        "primary-container": "#9e5238",
+                        "secondary-fixed": "#ffdbce",
+                        "accent-pressed": "#82412C",
+                        "on-surface-variant": "#54433e",
+                        "warning": "#D97706",
+                        "secondary-fixed-dim": "#ffb599",
+                        "surface": "#FFFFFF",
+                        "on-tertiary-container": "#c6efe8",
+                        "on-tertiary-fixed-variant": "#274d48",
+                        "background": "#FBF5F1",
+                        "surface-container-highest": "#f5ded4",
+                        "on-primary-fixed": "#390c00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "safe-top": "59px",
+                        "safe-bottom": "34px",
+                        "gutter": "16px",
+                        "edge-margin": "20px"
+                    },
+                    "fontFamily": {
+                        "label": ["Nunito Sans"],
+                        "caption": ["Nunito Sans"],
+                        "title": ["Nunito Sans"],
+                        "display": ["Newsreader"],
+                        "body": ["Nunito Sans"]
+                    },
+                    "fontSize": {
+                        "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+                        "title": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body min-h-screen flex flex-col pt-safe-top pb-safe-bottom">
+<!-- Top Navigation (Reduced for Login) -->
+<header class="w-full flex items-center justify-between px-edge-margin h-16 shrink-0">
+<div class="flex-1 flex justify-center">
+<h1 class="font-display text-display text-primary-container">Credentia</h1>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col justify-center px-edge-margin pb-12 w-full max-w-[600px] mx-auto">
+<div class="mb-10 text-center">
+<h2 class="font-title text-title text-on-surface mb-2">Welcome Back</h2>
+<p class="font-body text-body text-text-tertiary">Log in to access your professional network.</p>
+</div>
+<!-- Login Form -->
+<form class="space-y-6">
+<!-- Email Field -->
+<div class="space-y-2">
+<label class="block font-label text-label text-text-secondary" for="email">Email address</label>
+<div class="relative">
+<input class="w-full h-14 bg-surface rounded-xl border border-border px-4 font-body text-body text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container focus:border-transparent transition-shadow" id="email" name="email" placeholder="name@example.com" required="" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<label class="block font-label text-label text-text-secondary" for="password">Password</label>
+<a class="font-label text-label text-primary-container hover:opacity-80 transition-opacity" href="#">Forgot password?</a>
+</div>
+<div class="relative">
+<input class="w-full h-14 bg-surface rounded-xl border border-border pl-4 pr-12 font-body text-body text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container focus:border-transparent transition-shadow" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+<button class="absolute right-0 top-0 h-full px-4 flex items-center justify-center text-text-tertiary hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+</div>
+</div>
+<!-- Primary Action -->
+<button class="w-full h-14 mt-4 bg-primary-container text-on-primary font-label text-label rounded-full hover:bg-accent-pressed active:scale-[0.98] transition-all flex items-center justify-center shadow-[0_1px_2px_rgba(0,0,0,0.04)]" type="submit">
+                Log In
+            </button>
+</form>
+<!-- Divider -->
+<div class="flex items-center my-8">
+<div class="flex-1 h-px bg-border"></div>
+<span class="px-4 font-caption text-caption text-text-tertiary">or continue with</span>
+<div class="flex-1 h-px bg-border"></div>
+</div>
+<!-- Social Logins -->
+<div class="space-y-4">
+<button class="w-full h-14 bg-transparent border border-outline-variant text-text-secondary font-label text-label rounded-full hover:bg-surface-alt active:scale-[0.98] transition-all flex items-center justify-center gap-3" type="button">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path>
+</svg>
+                Google
+            </button>
+<button class="w-full h-14 bg-transparent border border-outline-variant text-text-secondary font-label text-label rounded-full hover:bg-surface-alt active:scale-[0.98] transition-all flex items-center justify-center gap-3" type="button">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+<path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.15 2.95.93 3.78 2.04-3.18 1.9-2.65 5.98.54 7.21-.73 1.55-1.7 3.14-2.97 3.76zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"></path>
+</svg>
+                Apple
+            </button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full pb-8 pt-4 px-edge-margin text-center">
+<p class="font-body text-body text-text-tertiary">
+            New here?
+            <a class="font-label text-label text-primary-container hover:opacity-80 transition-opacity ml-1" href="#">Create an account</a>
+</p>
+</footer>
+</body></html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Post Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700&amp;family=Newsreader:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "danger": "#DC2626",
+                            "on-surface": "#251913",
+                            "secondary-fixed": "#ffdbce",
+                            "surface-container-low": "#fff1eb",
+                            "surface-tint": "#934930",
+                            "surface-dim": "#ecd6cc",
+                            "inverse-primary": "#ffb59d",
+                            "surface-alt": "#F3E8E0",
+                            "surface-container-high": "#fae4da",
+                            "error-container": "#ffdad6",
+                            "on-tertiary": "#ffffff",
+                            "inverse-surface": "#3b2e27",
+                            "tertiary-fixed-dim": "#a6cec8",
+                            "surface": "#FFFFFF",
+                            "secondary-container": "#ffa988",
+                            "text-secondary": "#5C4A40",
+                            "on-primary": "#ffffff",
+                            "surface-container": "#ffeae0",
+                            "on-error-container": "#93000a",
+                            "on-background": "#251913",
+                            "border": "#E8DAD0",
+                            "on-secondary-container": "#793c21",
+                            "text-tertiary": "#8C7A70",
+                            "on-tertiary-container": "#c6efe8",
+                            "primary-fixed-dim": "#ffb59d",
+                            "tertiary-fixed": "#c2ebe4",
+                            "surface-container-lowest": "#ffffff",
+                            "secondary-fixed-dim": "#ffb599",
+                            "warning": "#D97706",
+                            "success": "#16A34A",
+                            "error": "#ba1a1a",
+                            "tertiary": "#305651",
+                            "surface-container-highest": "#f5ded4",
+                            "primary": "#803b23",
+                            "inverse-on-surface": "#ffede6",
+                            "surface-variant": "#f5ded4",
+                            "on-error": "#ffffff",
+                            "on-primary-container": "#ffe0d7",
+                            "on-secondary": "#ffffff",
+                            "accent-pressed": "#82412C",
+                            "on-primary-fixed": "#390c00",
+                            "tertiary-container": "#486e69",
+                            "outline-variant": "#dac1ba",
+                            "background": "#FBF5F1",
+                            "outline": "#87736d",
+                            "secondary": "#8f4c31",
+                            "on-secondary-fixed-variant": "#72361c",
+                            "on-secondary-fixed": "#370e00",
+                            "accent-tint": "#F5E2D8",
+                            "surface-bright": "#fff8f6",
+                            "primary-container": "#9e5238",
+                            "on-tertiary-fixed": "#00201d",
+                            "primary-fixed": "#ffdbd0",
+                            "on-surface-variant": "#54433e",
+                            "on-tertiary-fixed-variant": "#274d48",
+                            "on-primary-fixed-variant": "#75331b"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                    },
+                    "spacing": {
+                            "edge-margin": "20px",
+                            "unit": "8px",
+                            "safe-bottom": "34px",
+                            "safe-top": "59px",
+                            "gutter": "16px"
+                    },
+                    "fontFamily": {
+                            "title": [
+                                    "Nunito Sans"
+                            ],
+                            "label": [
+                                    "Nunito Sans"
+                            ],
+                            "display": [
+                                    "Newsreader"
+                            ],
+                            "caption": [
+                                    "Nunito Sans"
+                            ],
+                            "body": [
+                                    "Nunito Sans"
+                            ]
+                    },
+                    "fontSize": {
+                            "title": [
+                                    "20px",
+                                    {
+                                            "lineHeight": "28px",
+                                            "fontWeight": "600"
+                                    }
+                            ],
+                            "label": [
+                                    "14px",
+                                    {
+                                            "lineHeight": "20px",
+                                            "fontWeight": "500"
+                                    }
+                            ],
+                            "display": [
+                                    "32px",
+                                    {
+                                            "lineHeight": "40px",
+                                            "letterSpacing": "-0.02em",
+                                            "fontWeight": "700"
+                                    }
+                            ],
+                            "caption": [
+                                    "13px",
+                                    {
+                                            "lineHeight": "18px",
+                                            "fontWeight": "500"
+                                    }
+                            ],
+                            "body": [
+                                    "16px",
+                                    {
+                                            "lineHeight": "24px",
+                                            "fontWeight": "400"
+                                    }
+                            ]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body text-body antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 bg-background flex items-center px-edge-margin h-safe-top pt-[20px] pb-[10px] transition-shadow duration-300" id="topAppBar">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-variant transition-colors group">
+<span class="material-symbols-outlined text-primary group-active:scale-95 transition-transform" data-icon="chevron_left">chevron_left</span>
+</button>
+<h1 class="flex-1 text-center font-title text-title text-primary tracking-tight ml-[-40px]">Post</h1>
+</header>
+<!-- Main Content -->
+<main class="pt-[80px] pb-[100px] px-edge-margin max-w-[600px] mx-auto min-h-screen flex flex-col gap-unit">
+<!-- Original Post -->
+<article class="bg-surface rounded-[20px] p-gutter shadow-[0_1px_2px_rgba(0,0,0,0.04)] mb-4">
+<!-- Author Info -->
+<div class="flex items-center gap-3 mb-4">
+<img class="w-12 h-12 rounded-full object-cover border border-border" data-alt="Close up professional headshot of an approachable female orthodontist in her late 30s with warm brown hair. She is wearing a pristine white coat over a soft terracotta blouse. The lighting is soft and natural, emphasizing a trustworthy and empathetic demeanor. Shot against a blurred, bright modern clinical background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClrLgKoVAASVkiXHkPonfJql6JqJ8ickqHcYGlfw3JzeN7VwHPsOwou_Ndzi3491NR2wlJ2KDKuhJQxX8DUw-9i_yywdLN3McTm-JbEiucstcPhafm-bGiOWt640UnVta6G0Xm490RvKp_NWyAtqNu7yHgufsa-BFFESdnnhSrA_zFOnVh9jHmQ8sFI1rrvM9Vs6U9DNVZggSvcRpsX6NsRjH-kHcVouoP3PYfFe5JWleT65T7tU59"/>
+<div class="flex-1">
+<div class="flex items-center gap-1">
+<span class="font-title text-[16px] font-semibold text-on-surface">Dr. Elena Rodriguez</span>
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<span class="font-label text-label text-text-tertiary block">Orthodontist • 2h ago</span>
+</div>
+<button class="text-text-tertiary hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+</button>
+</div>
+<!-- Post Content -->
+<div class="font-body text-body text-on-surface mb-4 leading-relaxed">
+                Just implemented a new digital workflow for our clear aligner cases. The precision we're achieving with the new intraoral scanner is remarkable. We've cut down chair time by 15% and patient satisfaction is through the roof. Anyone else making the switch to fully digital impressions? I'd love to hear your experiences with onboarding the staff.
+            </div>
+<!-- Attached Image -->
+<div class="rounded-xl overflow-hidden mb-4 border border-border/50">
+<img alt="Professional dental office interior" class="w-full h-auto object-cover max-h-[400px]" src="https://lh3.googleusercontent.com/aida/AP1WRLsOowYx9CKEiQpYIHPG67mimQhdCBb6lcVbVH_WnajSHJDQnqr0EcSrSLn7LHyX1aA45aTjgpEkMFTWI0ZiSCabqKHQQeJNms7S5UO42uqP3hbglt2LZxTf2BTlfre0nIWKVgUvZ8OqEgRfc2VVXSHjs-PnB1fLIYhrH_PoG0KKOe14N_gKumy76jOndq6ALDstcfYoupBmnYbNL_vt4slKMw8N-dRm3aCzlBbUaOOP3Yox9PJYhhUTyQ"/>
+</div>
+<!-- Post Actions -->
+<div class="flex items-center gap-6 pt-2 border-t border-border/40">
+<button class="flex items-center gap-1.5 text-text-tertiary hover:text-primary transition-colors group">
+<span class="material-symbols-outlined text-[20px] group-active:scale-90 transition-transform" data-icon="favorite">favorite</span>
+<span class="font-label text-label">42</span>
+</button>
+<button class="flex items-center gap-1.5 text-primary group">
+<span class="material-symbols-outlined text-[20px] group-active:scale-90 transition-transform" data-icon="chat_bubble" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+<span class="font-label text-label">8</span>
+</button>
+<button class="flex items-center gap-1.5 text-text-tertiary hover:text-primary transition-colors group ml-auto">
+<span class="material-symbols-outlined text-[20px] group-active:scale-90 transition-transform" data-icon="share">share</span>
+</button>
+</div>
+</article>
+<!-- Comments Section -->
+<section class="flex flex-col gap-4">
+<h2 class="font-title text-[18px] font-semibold text-text-secondary px-2">Comments (8)</h2>
+<!-- Comment 1 -->
+<div class="flex gap-3 bg-surface-alt/50 p-4 rounded-xl">
+<img class="w-10 h-10 rounded-full object-cover shrink-0" data-alt="Headshot of a middle-aged male dentist with a short neat beard, wearing a light blue surgical scrub top. He has a warm, confident smile. The background is a brightly lit, modern dental office with soft focus, conveying a professional yet approachable healthcare environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBm4aEgE-OGwjUUfhraWuzcbzEWAc4jxESFLReYRakgPXYgO4J9SWnSE_qVwSdEfn2fpKp3tf1QhyHASMGS58MrXshleio7X8d7gJ-UVUMC7zBn9GJI8_UQ6KDR4G56QvF4Z7WW1iazdy9IzJ0u6PaFxfcBgn_7DRjyAsujwd1BG_F7woQMLRSJv99peooVc68cmSRrdc2ESBOlINOv8EXdcS3dU2KKryfxO4voeZcyk1aePF33BnNn"/>
+<div class="flex-1">
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-title text-[15px] font-semibold text-on-surface">Dr. Marcus Thorne</span>
+<span class="font-caption text-caption text-text-tertiary">1h ago</span>
+</div>
+<span class="font-caption text-caption text-primary block mb-2">Dentist</span>
+<p class="font-body text-[15px] text-on-surface-variant mb-2">We made the switch last year. The initial learning curve for the assistants was a bit steep, but holding weekly training sessions for the first month really helped. Highly recommend dedicating time for team practice.</p>
+<div class="flex items-center gap-4 text-text-tertiary">
+<button class="font-label text-caption hover:text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[16px]" data-icon="favorite">favorite</span> 12</button>
+<button class="font-label text-caption hover:text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[16px]" data-icon="reply">reply</span> Reply</button>
+</div>
+</div>
+</div>
+<!-- Comment 2 -->
+<div class="flex gap-3 bg-surface-alt/50 p-4 rounded-xl">
+<img class="w-10 h-10 rounded-full object-cover shrink-0" data-alt="Portrait of a young female periodontist looking thoughtful. She is wearing professional business casual attire in soft earth tones. The lighting is diffused and warm, shot in a high-end, sophisticated medical lounge area with indoor plants." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBREDh9oczx8izzkTSLqKsOVsc9S2fTgSlf_8bNCZxqWBn20emKa3lunafbn3whqqfiK0FssvfbLZOmMmM4zUXnkQfrMapMpYq5V01_eoSz3RMppTMaKAPfN-2iiGj3BM5SpTg_edN5JcxUpfTIH4UpR0tSUpSnwJDhoSx7kJrGyy6v1mpsOQiUSDlumLsvYV3Cg4fuLck2G3WGV3Dba3A1EOw8x9646Fxtf_XmOYcXiI6fG4IcxhMg"/>
+<div class="flex-1">
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-title text-[15px] font-semibold text-on-surface">Dr. Sarah Jenkins</span>
+<span class="font-caption text-caption text-text-tertiary">45m ago</span>
+</div>
+<span class="font-caption text-caption text-primary block mb-2">Periodontist</span>
+<p class="font-body text-[15px] text-on-surface-variant mb-2">That's amazing to hear! Which scanner did you go with? We are currently evaluating options and leaning towards the newer models for better soft tissue capture.</p>
+<div class="flex items-center gap-4 text-text-tertiary">
+<button class="font-label text-caption hover:text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[16px]" data-icon="favorite">favorite</span> 5</button>
+<button class="font-label text-caption hover:text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[16px]" data-icon="reply">reply</span> Reply</button>
+</div>
+</div>
+</div>
+<!-- Load More -->
+<button class="text-primary font-label text-label py-2 hover:bg-surface-alt/50 rounded-lg transition-colors w-full text-center mt-2">
+                View previous comments
+            </button>
+</section>
+</main>
+<!-- Pinned Reply Input -->
+<div class="fixed bottom-0 left-0 w-full bg-surface/95 backdrop-blur-md border-t border-border p-4 pb-safe-bottom z-40 shadow-[0_-8px_24px_rgba(0,0,0,0.06)]">
+<div class="max-w-[600px] mx-auto flex items-end gap-3 relative">
+<img class="w-9 h-9 rounded-full object-cover shrink-0 mb-[2px]" data-alt="Small thumbnail avatar of the current user, a medical professional wearing a warm terracotta colored top, smiling softly. Well lit and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdCKFB-CgdzOXdDxA4MIjKlEKiGNFu_z_fM8dmDEYeQEsScvy7II1t2phq7OpHyT_bmt6tPUZ9B9h9Ij5V0QN3XlKaJwGGu2W1KVojtw6NP0-FXLwH_6R6K5rTTGivcn2xKHrL5btD43xFPHjwVQZJcgHjWe_UaXWIs5T0NMge9nKM8Y2-d4jp4aO5BFErktIJXH5oVYOQcDmjjXRP9jEEQEInLJGBBR4XgPLgSmfYSRvniESX8QRG"/>
+<div class="flex-1 bg-surface-alt rounded-2xl p-1 flex items-end relative border border-transparent focus-within:border-primary transition-colors">
+<textarea class="w-full bg-transparent border-none focus:ring-0 resize-none py-2.5 px-3 font-body text-body text-on-surface placeholder:text-text-tertiary min-h-[44px] max-h-[120px]" placeholder="Add a comment..." rows="1" style="line-height: 1.4;"></textarea>
+<button class="w-9 h-9 shrink-0 flex items-center justify-center rounded-xl bg-primary text-on-primary hover:bg-accent-pressed transition-colors mb-1 mr-1 active:scale-95">
+<span class="material-symbols-outlined text-[20px]" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+        // Simple script to auto-resize textarea and add subtle shadow to header on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const textarea = document.querySelector('textarea');
+            const header = document.getElementById('topAppBar');
+            
+            if (textarea) {
+                textarea.addEventListener('input', function() {
+                    this.style.height = 'auto';
+                    this.style.height = (this.scrollHeight) + 'px';
+                });
+            }
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 10) {
+                    header.classList.add('shadow-[0_4px_12px_rgba(0,0,0,0.03)]', 'bg-surface/95', 'backdrop-blur-sm');
+                    header.classList.remove('bg-background');
+                } else {
+                    header.classList.remove('shadow-[0_4px_12px_rgba(0,0,0,0.03)]', 'bg-surface/95', 'backdrop-blur-sm');
+                    header.classList.add('bg-background');
+                }
+            });
+        });
+    </script>
+</body></html>

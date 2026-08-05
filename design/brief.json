@@ -1,0 +1,87 @@
+{
+  "title": "Credentia",
+  "slug": "credentia",
+  "domain": "health",
+  "style": "bright",
+  "features": [
+    "user registration and authentication",
+    "multiple user types/roles",
+    "professional profiles",
+    "search and filtering",
+    "user-generated content",
+    "ratings/reviews",
+    "private and public content visibility rules",
+    "professional networking",
+    "peer to peer direct messaging",
+    "community/social features",
+    "notifications",
+    "basic administrative dashboard",
+    "user verification",
+    "content reporting and moderation",
+    "location-based functionality",
+    "role-based access permissions"
+  ],
+  "screenCount": 20,
+  "sharedComponents": {
+    "bottomTabBar": {
+      "tabs": ["Feed", "Discover", "Messages", "Notifications", "Profile"],
+      "note": "5 tabs, rounded outline icons: home/feed, search, chat-bubble, bell, user-circle. Active tab in accent, others neutral grey."
+    },
+    "statusBar": "top app bar: back chevron (detail screens) or app wordmark (tab roots) + verified-badge icon where relevant",
+    "controls": "primary button: pill, accentFill bg, white label, default/pressed/disabled. secondary button: pill, 1px border accent, accent label. text input: 12px radius, border default, accent ring on focus, danger ring + helper text on error. card: 20px radius, soft shadow. chip: pill, accentTint bg for filters, neutral bg for tags."
+  },
+  "screens": [
+    {"name": "onboarding-welcome", "purpose": "brand splash introducing the professional network for dental and healthcare professionals", "content": "logo mark, headline 'The trusted network for healthcare professionals', subhead mentioning verified credentials, illustration of connected professional avatars, Get Started + Log In pill buttons", "group": "onboarding", "nav": "none", "states": ["default"]},
+    {"name": "signup-role-select", "purpose": "new user picks their professional role during registration", "content": "step indicator 1/3, grid of role cards (Dentist, Dental Hygienist, Dental Assistant, Orthodontist, More specialties), email + password fields, Continue button", "group": "onboarding", "nav": "none", "states": ["default"]},
+    {"name": "credential-verification", "purpose": "user uploads license/credential documents for identity verification before full access", "content": "step indicator 2/3, license number field, state/board dropdown, document upload card (drag license photo or PDF), NPI number field, note 'Reviewed within 1-2 business days', Submit for Review button", "group": "onboarding", "nav": "none", "states": ["default"]},
+    {"name": "login", "purpose": "returning user signs in", "content": "email field, password field with show/hide, Forgot password link, Log In pill button, divider 'or continue with', Google/Apple buttons, link to sign up", "group": "onboarding", "nav": "none", "states": ["default"]},
+    {"name": "feed-home", "purpose": "primary home feed of posts and updates from the user's professional network", "content": "top bar with wordmark + verified badge + bell icon, story-style row of connection avatars, feed of post cards (author avatar + name + credential badge + specialty tag, post text, optional image, like/comment/share row), floating create-post button", "group": "core", "nav": "Feed", "states": ["default", "empty"]},
+    {"name": "post-detail", "purpose": "view a single post with full comment thread", "content": "full post card at top, comment list with avatars + timestamps, reply input pinned at bottom, overflow menu (report, save, share)", "group": "detail", "nav": "none", "states": ["default"]},
+    {"name": "create-post", "purpose": "compose a new post and choose its visibility", "content": "modal sheet, text composer, attach photo/document icons, visibility selector chips (Public / Connections only / Private), Post button top right", "group": "detail", "nav": "none", "states": ["default"]},
+    {"name": "discover-search", "purpose": "search and filter for other verified professionals", "content": "search bar, filter chips (Specialty, Location, Rating, Verified only), scrollable list of professional result cards with avatar, name, specialty, city, star rating, Connect button", "group": "core", "nav": "Discover", "states": ["default", "empty"]},
+    {"name": "professional-profile", "purpose": "view another professional's public profile, credentials, and ratings", "content": "cover banner + avatar + verified-credential badge, name, specialty, location pin, bio, stats row (connections, years experience, rating average with star breakdown), recent reviews list, Connect / Message buttons", "group": "detail", "nav": "none", "states": ["default"]},
+    {"name": "my-profile", "purpose": "the signed-in user's own profile with stats and quick actions", "content": "cover banner + avatar + verified badge, name + specialty, stats row (connections, posts, rating), Edit Profile button, tabbed sections (Posts, Credentials, Reviews), Settings gear icon", "group": "core", "nav": "Profile", "states": ["default"]},
+    {"name": "edit-profile", "purpose": "edit personal and professional profile fields with per-field visibility", "content": "avatar upload, name, specialty dropdown, bio textarea, license info section (read-only, verified lock icon), per-field visibility toggle (Public/Connections/Private) next to sensitive fields, Save button", "group": "settings", "nav": "none", "states": ["default"]},
+    {"name": "messages-inbox", "purpose": "list of direct message conversations with peers", "content": "search field, list of conversation rows (avatar, name, credential badge, last message preview, timestamp, unread dot)", "group": "core", "nav": "Messages", "states": ["default", "empty"]},
+    {"name": "chat-thread", "purpose": "one to one direct message conversation", "content": "header with peer avatar + name + specialty, message bubbles (sent accent, received neutral), attachment icon, text input with send button", "group": "detail", "nav": "none", "states": ["default"]},
+    {"name": "notifications", "purpose": "activity notifications feed", "content": "grouped list (Today, This week) of notification rows with icon by type (connection request, comment, like, verification approved, admin alert), tap targets, mark-all-read link", "group": "core", "nav": "Notifications", "states": ["default"]},
+    {"name": "report-content", "purpose": "report or flag a post, comment, or user for moderation", "content": "modal sheet, reason radio list (Spam, Harassment, Misinformation, Impersonation, Other), optional detail textarea, Submit Report button", "group": "detail", "nav": "none", "states": ["default"]},
+    {"name": "admin-dashboard", "purpose": "basic administrative view for reviewing verifications and moderation queue", "content": "summary stat cards (Pending verifications, Open reports, Active users), tabbed queue list (Verification requests with approve/reject buttons; Reported content with review/remove/dismiss actions)", "group": "settings", "nav": "none", "states": ["default"]},
+    {"name": "privacy-settings", "purpose": "manage visibility and permission rules across the account", "content": "grouped setting rows: profile visibility, content default visibility, who can message me, who can see my location, blocked users link, data & privacy policy link", "group": "settings", "nav": "none", "states": ["default"]}
+  ],
+  "designSystem": {
+    "variant": "E",
+    "theme": "light",
+    "frame": "393x852 mobile (iPhone 16/17), safe areas: top ~59px, bottom ~34px",
+    "color": {
+      "background": "#FBF5F1",
+      "surface": "#FFFFFF",
+      "surfaceAlt": "#F3E8E0",
+      "accent": "#C77A5B",
+      "accentFill": "#9E5238",
+      "accentTint": "#F5E2D8",
+      "accentPressed": "#82412C",
+      "support": "#7FA6A0",
+      "text": {"primary": "#2A1E18", "secondary": "#5C4A40", "tertiary": "#8C7A70"},
+      "border": "#E8DAD0",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626"
+    },
+    "type": {
+      "fontFamily": "Nunito",
+      "displayFamily": "Newsreader",
+      "numeralFamily": "Nunito",
+      "display": "32 / 700 / -0.02em tracking",
+      "title": "20 / 600",
+      "body": "16 / 400",
+      "label": "14 / 500",
+      "caption": "13 / 500"
+    },
+    "radius": {"card": 20, "control": 14, "input": 12, "pill": 999},
+    "spacing": "8pt scale (4, 8, 12, 16, 24, 32); screen edge padding 20px; generous vertical rhythm",
+    "elevation": "soft only: card = 0 1px 2px rgba(0,0,0,.04) + 0 8px 24px rgba(0,0,0,.06); no hard/black shadows",
+    "icons": "one set, rounded outline (Lucide/Phosphor regular), 24px, ~1.75 stroke",
+    "a11y": "white labels only on accentFill (>=4.5:1); bright accent for large fills/icons/hero numerals with dark label (>=3:1); text on gradient passes 4.5:1; tap targets >=44x44pt"
+  }
+}

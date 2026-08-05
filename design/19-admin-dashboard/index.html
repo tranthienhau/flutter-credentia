@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Credentia - Admin Dashboard</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&amp;family=Nunito+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface": "#FFFFFF",
+                      "outline": "#87736d",
+                      "accent-pressed": "#82412C",
+                      "secondary-container": "#ffa988",
+                      "tertiary": "#305651",
+                      "on-surface": "#251913",
+                      "on-secondary-fixed-variant": "#72361c",
+                      "on-secondary-fixed": "#370e00",
+                      "secondary-fixed": "#ffdbce",
+                      "on-secondary-container": "#793c21",
+                      "tertiary-fixed": "#c2ebe4",
+                      "on-error": "#ffffff",
+                      "danger": "#DC2626",
+                      "on-primary-container": "#ffe0d7",
+                      "primary": "#803b23",
+                      "surface-variant": "#f5ded4",
+                      "on-secondary": "#ffffff",
+                      "surface-container": "#ffeae0",
+                      "surface-container-highest": "#f5ded4",
+                      "tertiary-container": "#486e69",
+                      "error": "#ba1a1a",
+                      "outline-variant": "#dac1ba",
+                      "text-secondary": "#5C4A40",
+                      "tertiary-fixed-dim": "#a6cec8",
+                      "background": "#FBF5F1",
+                      "inverse-primary": "#ffb59d",
+                      "on-primary-fixed": "#390c00",
+                      "on-background": "#251913",
+                      "primary-fixed-dim": "#ffb59d",
+                      "error-container": "#ffdad6",
+                      "on-primary": "#ffffff",
+                      "inverse-surface": "#3b2e27",
+                      "secondary-fixed-dim": "#ffb599",
+                      "surface-bright": "#fff8f6",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-container": "#c6efe8",
+                      "success": "#16A34A",
+                      "surface-tint": "#934930",
+                      "on-surface-variant": "#54433e",
+                      "secondary": "#8f4c31",
+                      "primary-container": "#9e5238",
+                      "on-error-container": "#93000a",
+                      "surface-alt": "#F3E8E0",
+                      "border": "#E8DAD0",
+                      "warning": "#D97706",
+                      "surface-dim": "#ecd6cc",
+                      "text-tertiary": "#8C7A70",
+                      "on-tertiary-fixed": "#00201d",
+                      "on-tertiary-fixed-variant": "#274d48",
+                      "inverse-on-surface": "#ffede6",
+                      "accent-tint": "#F5E2D8",
+                      "surface-container-low": "#fff1eb",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-fixed": "#ffdbd0",
+                      "on-primary-fixed-variant": "#75331b",
+                      "surface-container-high": "#fae4da"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px",
+                      "2xl": "1.25rem" // 20px
+              },
+              "spacing": {
+                      "gutter": "16px",
+                      "safe-bottom": "34px",
+                      "edge-margin": "20px",
+                      "unit": "8px",
+                      "safe-top": "59px"
+              },
+              "fontFamily": {
+                      "body": [
+                              "Nunito Sans"
+                      ],
+                      "display": [
+                              "Newsreader"
+                      ],
+                      "label": [
+                              "Nunito Sans"
+                      ],
+                      "caption": [
+                              "Nunito Sans"
+                      ],
+                      "title": [
+                              "Nunito Sans"
+                      ]
+              },
+              "fontSize": {
+                      "body": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "caption": [
+                              "13px",
+                              {
+                                      "lineHeight": "18px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "title": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body min-h-screen antialiased flex flex-col max-w-[600px] mx-auto overflow-x-hidden relative">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center px-edge-margin pt-safe-top h-[94px] w-full bg-background sticky top-0 z-40">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-alt transition-colors active:scale-95 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">chevron_left</span>
+</button>
+<h1 class="font-display text-title text-primary">Admin</h1>
+<div class="w-10 h-10"></div> <!-- Spacer for center alignment -->
+</header>
+<!-- Main Content -->
+<main class="flex-1 pb-safe-bottom">
+<!-- Stat Cards Horizontal Scroll -->
+<section class="mt-4 pl-edge-margin mb-8">
+<div class="flex gap-4 overflow-x-auto no-scrollbar pr-edge-margin pb-4 -mb-4 snap-x">
+<!-- Stat Card 1 -->
+<div class="flex-shrink-0 w-40 bg-surface rounded-2xl p-4 shadow-[0_1px_2px_rgba(0,0,0,0.04)] snap-start">
+<p class="font-caption text-caption text-text-tertiary mb-2 uppercase tracking-wide">Pending verifications</p>
+<p class="font-display text-display text-primary">12</p>
+</div>
+<!-- Stat Card 2 -->
+<div class="flex-shrink-0 w-40 bg-surface rounded-2xl p-4 shadow-[0_1px_2px_rgba(0,0,0,0.04)] snap-start">
+<p class="font-caption text-caption text-text-tertiary mb-2 uppercase tracking-wide">Open reports</p>
+<p class="font-display text-display text-on-surface">5</p>
+</div>
+<!-- Stat Card 3 -->
+<div class="flex-shrink-0 w-40 bg-surface rounded-2xl p-4 shadow-[0_1px_2px_rgba(0,0,0,0.04)] snap-start">
+<p class="font-caption text-caption text-text-tertiary mb-2 uppercase tracking-wide">Active users</p>
+<p class="font-display text-display text-on-surface">1.2k</p>
+</div>
+</div>
+</section>
+<!-- Segmented Control Tabs -->
+<section class="px-edge-margin mb-6">
+<div class="bg-surface-alt p-1 rounded-full flex">
+<button class="flex-1 py-2 px-4 rounded-full bg-surface shadow-[0_1px_2px_rgba(0,0,0,0.04)] font-label text-label text-primary transition-all">
+                    Verification requests
+                </button>
+<button class="flex-1 py-2 px-4 rounded-full font-label text-label text-text-tertiary hover:text-on-surface transition-all">
+                    Reported content
+                </button>
+</div>
+</section>
+<!-- Verification Requests List -->
+<section class="px-edge-margin flex flex-col gap-4">
+<!-- Card 1 -->
+<article class="bg-surface rounded-2xl p-5 shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] transition-shadow">
+<div class="flex gap-4 mb-4">
+<div class="w-16 h-16 rounded-lg bg-surface-alt overflow-hidden flex-shrink-0 border border-border">
+<img alt="Document thumbnail" class="w-full h-full object-cover" data-alt="A macro shot of a sleek, modern medical license ID card featuring a subtle watermark, resting on a clean white surface with soft, diffused studio lighting. The aesthetic is extremely professional, crisp, and high-key, using soft warm earth tones and stark whites to convey trust and precision in a high-end healthcare networking context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCscqahBLjoobhK7uee7ftPUyOA0-bCSk5lY4HgCewzQImjlnQHOpxkUSWaTru1kGI2LFy00N4l_27MBXBSMKkrYX25dWpJRSFPPaEqakEt4PGhf2Z9snPZtzjBxj4j1IUCzvbDNCBVvwZQ4K1fD5um9fW55N7odVcqySJl2-C3FWchYoxReZP7_7RVUt3oV4mRSfKCdUU-_mbjjE1bVpCrQlkSYdHm06lzLWb8BB8MIURPbozKbmeO"/>
+</div>
+<div>
+<h3 class="font-title text-title text-on-surface mb-1">Dr. Sofia Martinez</h3>
+<p class="font-body text-body text-text-secondary">Periodontist</p>
+<p class="font-caption text-caption text-text-tertiary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 0;">schedule</span>
+                            Submitted 2h ago
+                        </p>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="flex-1 bg-surface border border-primary text-primary font-label text-label py-3 rounded-full hover:bg-surface-alt active:scale-95 transition-all">
+                        Reject
+                    </button>
+<button class="flex-1 bg-primary text-on-primary font-label text-label py-3 rounded-full hover:bg-accent-pressed active:scale-95 transition-all shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
+                        Approve
+                    </button>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface rounded-2xl p-5 shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] transition-shadow">
+<div class="flex gap-4 mb-4">
+<div class="w-16 h-16 rounded-lg bg-surface-alt overflow-hidden flex-shrink-0 border border-border">
+<img alt="Document thumbnail" class="w-full h-full object-cover" data-alt="A macro shot of a sleek, modern medical license ID card featuring a subtle watermark, resting on a clean white surface with soft, diffused studio lighting. The aesthetic is extremely professional, crisp, and high-key, using soft warm earth tones and stark whites to convey trust and precision in a high-end healthcare networking context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNczYhsQhG7JMRf4JtluD8JbmeM69ivkOY7Wvm8GkfU_j3WdShiSKJSrC1rPak2hZZx7Ih7uzIq-QoHMaX4PpXP1N1Kn5pNYMpfiK5lj7ZRk05HdlBKlhHBg-H1xdV4_fHzJh6Dxs621YBZrKKbZm5V9hWzY1OnMejP94M74ba9qgMrELGGuJM2E0oY_EUgWn7lBNHAA0jn2dTOpGXMNU7EPWvBIP8ed_DmoWpnYwe7iLy_MEWjNUi"/>
+</div>
+<div>
+<h3 class="font-title text-title text-on-surface mb-1">Dr. James Chen</h3>
+<p class="font-body text-body text-text-secondary">Orthodontist</p>
+<p class="font-caption text-caption text-text-tertiary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 0;">schedule</span>
+                            Submitted 4h ago
+                        </p>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="flex-1 bg-surface border border-primary text-primary font-label text-label py-3 rounded-full hover:bg-surface-alt active:scale-95 transition-all">
+                        Reject
+                    </button>
+<button class="flex-1 bg-primary text-on-primary font-label text-label py-3 rounded-full hover:bg-accent-pressed active:scale-95 transition-all shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
+                        Approve
+                    </button>
+</div>
+</article>
+</section>
+<!-- Bottom spacing for clear area -->
+<div class="h-8"></div>
+</main>
+</body></html>

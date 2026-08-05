@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Credentia - Profile</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+</style>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration -->
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "background": "#FBF5F1",
+                "surface-container-low": "#fff1eb",
+                "surface": "#FFFFFF",
+                "secondary-fixed": "#ffdbce",
+                "warning": "#D97706",
+                "on-secondary": "#ffffff",
+                "tertiary": "#305651",
+                "surface-container-high": "#fae4da",
+                "text-secondary": "#5C4A40",
+                "on-primary-container": "#ffe0d7",
+                "error": "#ba1a1a",
+                "primary-fixed-dim": "#ffb59d",
+                "tertiary-fixed": "#c2ebe4",
+                "on-tertiary": "#ffffff",
+                "on-secondary-container": "#793c21",
+                "on-background": "#251913",
+                "inverse-on-surface": "#ffede6",
+                "border": "#E8DAD0",
+                "primary": "#803b23",
+                "success": "#16A34A",
+                "surface-container-lowest": "#ffffff",
+                "on-primary": "#ffffff",
+                "primary-container": "#9e5238",
+                "on-tertiary-fixed-variant": "#274d48",
+                "inverse-primary": "#ffb59d",
+                "accent-pressed": "#82412C",
+                "tertiary-fixed-dim": "#a6cec8",
+                "outline-variant": "#dac1ba",
+                "secondary": "#8f4c31",
+                "tertiary-container": "#486e69",
+                "on-secondary-fixed": "#370e00",
+                "on-error-container": "#93000a",
+                "on-tertiary-fixed": "#00201d",
+                "surface-container": "#ffeae0",
+                "on-secondary-fixed-variant": "#72361c",
+                "surface-container-highest": "#f5ded4",
+                "inverse-surface": "#3b2e27",
+                "surface-alt": "#F3E8E0",
+                "surface-dim": "#ecd6cc",
+                "surface-variant": "#f5ded4",
+                "on-primary-fixed": "#390c00",
+                "accent-tint": "#F5E2D8",
+                "surface-tint": "#934930",
+                "text-tertiary": "#8C7A70",
+                "on-tertiary-container": "#c6efe8",
+                "error-container": "#ffdad6",
+                "primary-fixed": "#ffdbd0",
+                "danger": "#DC2626",
+                "on-surface": "#251913",
+                "outline": "#87736d",
+                "secondary-container": "#ffa988",
+                "on-surface-variant": "#54433e",
+                "on-error": "#ffffff",
+                "secondary-fixed-dim": "#ffb599",
+                "on-primary-fixed-variant": "#75331b",
+                "surface-bright": "#fff8f6"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px",
+                "2xl": "20px"
+        },
+        "spacing": {
+                "safe-bottom": "34px",
+                "gutter": "16px",
+                "safe-top": "59px",
+                "unit": "8px",
+                "edge-margin": "20px"
+        },
+        "fontFamily": {
+                "display": [
+                        "Newsreader"
+                ],
+                "label": [
+                        "Nunito Sans"
+                ],
+                "title": [
+                        "Nunito Sans"
+                ],
+                "body": [
+                        "Nunito Sans"
+                ],
+                "caption": [
+                        "Nunito Sans"
+                ]
+        },
+        "fontSize": {
+                "display": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "500"
+                        }
+                ],
+                "title": [
+                        "20px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "caption": [
+                        "13px",
+                        {
+                                "lineHeight": "18px",
+                                "fontWeight": "500"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+</head>
+<body class="bg-background text-on-background font-body antialiased min-h-screen relative flex flex-col md:items-center">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex items-center justify-between px-edge-margin h-safe-top bg-background md:max-w-[600px] md:mx-auto">
+<button class="w-10 h-10 flex items-center justify-start text-primary hover:opacity-80 transition-opacity active:scale-95">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span>
+</button>
+<h1 class="font-display text-title text-on-surface absolute left-1/2 -translate-x-1/2">Profile</h1>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</header>
+<!-- Main Content Container (Tablet constrained) -->
+<main class="w-full pt-safe-top pb-safe-bottom flex-1 md:max-w-[600px] md:bg-surface md:shadow-[0_8px_24px_rgba(0,0,0,.06)] md:min-h-screen md:mx-auto">
+<!-- Header Section: Cover Banner & Avatar -->
+<div class="relative w-full">
+<!-- Cover Banner -->
+<div class="h-32 w-full bg-gradient-to-r from-secondary to-tertiary-fixed-dim"></div>
+<!-- Avatar & Actions Area -->
+<div class="px-edge-margin -mt-12 relative flex justify-between items-end">
+<!-- Avatar Wrapper -->
+<div class="relative inline-block">
+<img alt="" class="w-[104px] h-[104px] rounded-full object-cover border-4 border-background bg-surface-alt shadow-[0_1px_2px_rgba(0,0,0,.04)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkLz9Ni_d7TUsWQNkdTse_AGg1kl5W-RIUIzwAb1zpso5QsTCKLPA1J-VMMBmqjKgyhW8IsaxHlvnrEBp5LVNyX4rY_a63PPlHSz0fRXY6mVTGUBhJyR8BOnn8BHwVhMJlXg_DM9pXhAvwjG0aZFuI0gN--3EDobkLjnCOSbrsMmogDOdHfKY9l839IloV7-z1ObPl4kX7Nx-jKW3s09x_eY5p7FIiR4TcGozH0UbbT9ePrLJlGCO3"/>
+<!-- Verified Badge -->
+<div class="absolute bottom-1 right-1 bg-surface rounded-full p-0.5 shadow-sm">
+<div class="bg-success text-on-primary rounded-full w-6 h-6 flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Profile Info -->
+<div class="px-edge-margin pt-4 pb-6">
+<h2 class="font-display text-display text-on-surface">Dr. Elena Rodriguez</h2>
+<div class="flex items-center gap-2 mt-1 text-text-secondary font-body text-body">
+<span class="font-medium text-primary">Orthodontist</span>
+<span class="w-1 h-1 rounded-full bg-border"></span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Chicago, IL</span>
+</div>
+</div>
+<p class="mt-4 text-text-secondary font-body text-body">
+        Dedicated to creating confident smiles with advanced digital orthodontics. Over 10 years of clinical excellence.
+      </p>
+<!-- Buttons Section -->
+<div class="flex gap-3 mt-6">
+<button class="flex-1 bg-primary-container text-on-primary font-label text-label py-3 rounded-full hover:bg-accent-pressed transition-colors active:scale-95 flex justify-center items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+          Connect
+        </button>
+<button class="flex-1 border border-secondary text-secondary font-label text-label py-3 rounded-full hover:bg-surface-container-low transition-colors active:scale-95 flex justify-center items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">chat_bubble</span>
+          Message
+        </button>
+</div>
+</div>
+<!-- Stats Row -->
+<div class="px-edge-margin pb-8">
+<div class="bg-surface rounded-2xl p-4 shadow-[0_1px_2px_rgba(0,0,0,.04)] border border-surface-container-high flex justify-between items-center text-center">
+<div class="flex-1 flex flex-col items-center">
+<span class="font-title text-title text-primary">1.2k</span>
+<span class="font-caption text-caption text-text-tertiary mt-1">Connections</span>
+</div>
+<div class="w-px h-10 bg-border"></div>
+<div class="flex-1 flex flex-col items-center">
+<span class="font-title text-title text-primary">10</span>
+<span class="font-caption text-caption text-text-tertiary mt-1">Years exp.</span>
+</div>
+<div class="w-px h-10 bg-border"></div>
+<div class="flex-1 flex flex-col items-center">
+<div class="flex items-center gap-1">
+<span class="font-title text-title text-primary">4.9</span>
+<span class="material-symbols-outlined text-[16px] text-warning" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-caption text-caption text-text-tertiary mt-1">48 reviews</span>
+</div>
+</div>
+</div>
+<!-- Recent Reviews -->
+<div class="px-edge-margin pb-8">
+<h3 class="font-display text-title text-on-surface mb-4">Recent reviews</h3>
+<div class="flex flex-col gap-4">
+<!-- Review Card 1 -->
+<div class="bg-surface rounded-2xl p-5 shadow-[0_1px_2px_rgba(0,0,0,.04)] border border-surface-container-highest">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label text-label text-on-surface">Dr. Sarah Jenkins</span>
+<div class="flex gap-0.5 text-warning">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="font-body text-body text-text-secondary text-[15px] leading-snug">
+            "Incredible precision with aligner cases. Highly recommend!"
+          </p>
+</div>
+<!-- Review Card 2 -->
+<div class="bg-surface rounded-2xl p-5 shadow-[0_1px_2px_rgba(0,0,0,.04)] border border-surface-container-highest">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label text-label text-on-surface">Dr. Marcus Thorne</span>
+<div class="flex gap-0.5 text-warning">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]">star_half</span>
+</div>
+</div>
+<p class="font-body text-body text-text-secondary text-[15px] leading-snug">
+            "Very professional and collaborative. Great peer to work with."
+          </p>
+</div>
+</div>
+</div>
+</main>
+</body></html>

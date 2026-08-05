@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<title>Credentia - Search Empty State</title>
+<!-- Google Fonts: Newsreader (Display) & Nunito Sans (UI) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..700&amp;family=Nunito+Sans:opsz,wght@6..12,400..700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#f5ded4",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#f5ded4",
+                        "background": "#FBF5F1",
+                        "primary-container": "#9e5238",
+                        "secondary-fixed-dim": "#ffb599",
+                        "outline-variant": "#dac1ba",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#fff1eb",
+                        "tertiary": "#305651",
+                        "primary": "#803b23",
+                        "secondary-container": "#ffa988",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#251913",
+                        "on-background": "#251913",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#a6cec8",
+                        "text-secondary": "#5C4A40",
+                        "tertiary-fixed": "#c2ebe4",
+                        "secondary": "#8f4c31",
+                        "surface-container": "#ffeae0",
+                        "on-secondary-fixed": "#370e00",
+                        "on-tertiary-fixed": "#00201d",
+                        "surface-tint": "#934930",
+                        "on-primary": "#ffffff",
+                        "surface": "#FFFFFF",
+                        "accent-pressed": "#82412C",
+                        "success": "#16A34A",
+                        "on-surface-variant": "#54433e",
+                        "danger": "#DC2626",
+                        "on-primary-fixed": "#390c00",
+                        "on-tertiary-container": "#c6efe8",
+                        "on-primary-container": "#ffe0d7",
+                        "inverse-on-surface": "#ffede6",
+                        "on-secondary-fixed-variant": "#72361c",
+                        "border": "#E8DAD0",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#ffdbce",
+                        "surface-dim": "#ecd6cc",
+                        "warning": "#D97706",
+                        "outline": "#87736d",
+                        "on-tertiary-fixed-variant": "#274d48",
+                        "inverse-surface": "#3b2e27",
+                        "primary-fixed-dim": "#ffb59d",
+                        "surface-alt": "#F3E8E0",
+                        "surface-bright": "#fff8f6",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#486e69",
+                        "on-secondary-container": "#793c21",
+                        "text-tertiary": "#8C7A70",
+                        "accent-tint": "#F5E2D8",
+                        "primary-fixed": "#ffdbd0",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#ffb59d",
+                        "surface-container-high": "#fae4da",
+                        "on-primary-fixed-variant": "#75331b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "card": "20px"
+                    },
+                    "spacing": {
+                        "safe-top": "59px",
+                        "gutter": "16px",
+                        "unit": "8px",
+                        "edge-margin": "20px",
+                        "safe-bottom": "34px"
+                    },
+                    "fontFamily": {
+                        "label": ["Nunito Sans", "sans-serif"],
+                        "display": ["Newsreader", "serif"],
+                        "title": ["Nunito Sans", "sans-serif"],
+                        "body": ["Nunito Sans", "sans-serif"],
+                        "caption": ["Nunito Sans", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "display-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "title-mobile": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }]
+                    },
+                    "boxShadow": {
+                        "card": "0 1px 2px rgba(0,0,0,.04)",
+                        "float": "0 8px 24px rgba(0,0,0,.06)"
+                    }
+                }
+            }
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body antialiased min-h-screen flex flex-col pt-safe-top pb-safe-bottom mx-auto max-w-[600px] relative">
+<!-- Top App Bar (Search Context) -->
+<header class="fixed top-0 w-full z-50 bg-background max-w-[600px] mx-auto px-edge-margin pt-[59px] pb-unit flex flex-col gap-unit">
+<div class="flex items-center gap-unit">
+<!-- Search Input -->
+<div class="flex-1 relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-tertiary" style="font-variation-settings: 'FILL' 0;">search</span>
+<input class="w-full bg-surface-alt border border-border text-on-surface font-body text-body rounded-xl py-3 pl-10 pr-10 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all placeholder:text-text-tertiary" placeholder="Search specialties, names..." type="text" value="Pediatric Neurosurgery"/>
+<button aria-label="Clear search" class="absolute right-3 top-1/2 -translate-y-1/2 text-text-tertiary hover:text-on-surface">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">cancel</span>
+</button>
+</div>
+<!-- Filter Button -->
+<button class="bg-surface border border-border text-primary rounded-xl h-12 w-12 flex items-center justify-center shrink-0 shadow-card hover:bg-surface-alt transition-colors active:scale-95 relative">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">tune</span>
+<!-- Active filter indicator -->
+<span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary ring-2 ring-surface"></span>
+</button>
+</div>
+<!-- Filter Chips (Scrollable Row) -->
+<div class="flex items-center gap-unit overflow-x-auto no-scrollbar py-1 w-full mask-linear-right">
+<button class="shrink-0 px-4 py-2 bg-accent-tint text-primary-fixed-variant rounded-full font-label text-label flex items-center gap-1 active:scale-95 transition-transform whitespace-nowrap border border-primary/20">
+<span>Rating: 4.5+</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 0;">close</span>
+</button>
+<button class="shrink-0 px-4 py-2 bg-accent-tint text-primary-fixed-variant rounded-full font-label text-label flex items-center gap-1 active:scale-95 transition-transform whitespace-nowrap border border-primary/20">
+<span>Distance: &lt;5mi</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 0;">close</span>
+</button>
+<button class="shrink-0 px-4 py-2 bg-surface-alt text-text-secondary rounded-full font-label text-label flex items-center gap-1 active:scale-95 transition-transform whitespace-nowrap border border-transparent">
+<span>Availability</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 0;">keyboard_arrow_down</span>
+</button>
+<button class="shrink-0 px-4 py-2 bg-surface-alt text-text-secondary rounded-full font-label text-label flex items-center gap-1 active:scale-95 transition-transform whitespace-nowrap border border-transparent">
+<span>Insurance</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 0;">keyboard_arrow_down</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas (Empty State) -->
+<main class="flex-1 flex flex-col items-center justify-center px-edge-margin mt-[140px] mb-[100px] text-center w-full">
+<!-- Illustration -->
+<div class="w-64 h-64 mb-8 relative flex items-center justify-center">
+<!-- Decorative blurred background shape -->
+<div class="absolute w-48 h-48 bg-accent-tint rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-pulse" style="animation-duration: 4s;"></div>
+<img alt="Empty search results illustration" class="w-full h-full object-contain relative z-10 drop-shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6sjCs_GEGRLzRMbOyb66AZaWwn2Vlk20GitrMlgGkRZVxahHF_oxgJa9msWlBIM4dx_wJ5LVrJF0RFLGL6wj6vj8SsZk6UTlDzluCP-lNvfwfqTNU3mNht3S2H_vZymZj5JCp6AQbQ1mj364A8507zkQpvHvIoevKwp0qauOFO4CKaAaKTJh9k1GTRWiyj3cGq73uJogRPE6MHLS_zJkXpK9D8Ffpevu-5i-yZjLlhTjsYV7r5E1M"/>
+</div>
+<!-- Typography -->
+<div class="max-w-[300px] flex flex-col items-center gap-3">
+<h1 class="font-display text-display-mobile text-on-surface">No professionals found</h1>
+<p class="font-body text-body text-text-secondary">Try adjusting your filters or search a different specialty to find the right match.</p>
+</div>
+<!-- Call to Action -->
+<div class="mt-8">
+<button class="px-6 py-3.5 bg-transparent border border-primary text-primary font-label text-label rounded-full hover:bg-surface active:bg-surface-alt active:scale-95 transition-all duration-200">
+                Clear all filters
+            </button>
+</div>
+<!-- Helpful Suggestion (Optional contextual element) -->
+<div class="mt-12 bg-surface w-full p-4 rounded-card shadow-card flex items-start gap-3 border border-border">
+<div class="bg-surface-alt text-primary rounded-full p-2 shrink-0">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">lightbulb</span>
+</div>
+<div class="text-left">
+<h3 class="font-title text-[16px] leading-snug font-semibold text-on-surface mb-1">Expand your search</h3>
+<p class="font-body text-[14px] leading-snug text-text-secondary">Consider looking into general 'Pediatrics' or increasing your distance radius.</p>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 h-[84px] bg-surface shadow-[0_-1px_2px_rgba(0,0,0,0.04)] pb-safe-bottom max-w-[600px] left-1/2 -translate-x-1/2">
+<button class="flex flex-col items-center justify-center text-text-tertiary hover:bg-surface-container-low transition-colors active:scale-90 duration-200 w-16 h-full rounded-xl">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">home</span>
+<span class="font-label text-[11px] leading-none font-medium">Feed</span>
+</button>
+<button class="flex flex-col items-center justify-center text-primary font-semibold hover:bg-surface-container-low transition-colors active:scale-90 duration-200 w-16 h-full rounded-xl">
+<span class="material-symbols-outlined mb-1 text-primary" style="font-variation-settings: 'FILL' 1;">search</span>
+<span class="font-label text-[11px] leading-none text-primary">Discover</span>
+</button>
+<button class="flex flex-col items-center justify-center text-text-tertiary hover:bg-surface-container-low transition-colors active:scale-90 duration-200 w-16 h-full rounded-xl relative">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">chat</span>
+<span class="font-label text-[11px] leading-none font-medium">Messages</span>
+</button>
+<button class="flex flex-col items-center justify-center text-text-tertiary hover:bg-surface-container-low transition-colors active:scale-90 duration-200 w-16 h-full rounded-xl relative">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">notifications</span>
+<!-- Notification badge -->
+<span class="absolute top-3 right-4 w-2 h-2 bg-error rounded-full ring-2 ring-surface"></span>
+<span class="font-label text-[11px] leading-none font-medium">Notifications</span>
+</button>
+<button class="flex flex-col items-center justify-center text-text-tertiary hover:bg-surface-container-low transition-colors active:scale-90 duration-200 w-16 h-full rounded-xl">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">person</span>
+<span class="font-label text-[11px] leading-none font-medium">Profile</span>
+</button>
+</nav>
+<style>
+        /* CSS mask for fade out effect on horizontal scroll */
+        .mask-linear-right {
+            -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
+            mask-image: linear-gradient(to right, black 85%, transparent 100%);
+        }
+    </style>
+</body></html>
